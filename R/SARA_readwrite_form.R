@@ -1,12 +1,12 @@
-#require(RODBC);
-#channel <- odbcConnect("AFSC", uid="AGREIG", pwd="");
-
-#SARA_readwrite_form <- function(fn){
+#' SARA report files into dataframes 
+#'
+#' @return  update from last year's files
+#' @export
+SARA_readwrite_form <- function(){
 flist=list.files("tier456files",pattern="*.dat");
 for (fnam in flist){
    print(fnam)
   fn <- paste0("tier456files/",fnam)
-#  SARA_readwrite_form(fn)
    skipp=0			# skipp indicates the header lines to be skipped
    myfile <- scan(fn, what="character", skip=skipp,flush=T,blank.lines.skip=FALSE, quiet=F);
    b=as.numeric(myfile[8]);
@@ -68,9 +68,6 @@ ifile <- scan(fn, what="character", skip=skipp,blank.lines.skip=FALSE, flush=TRU
         A <- list()
         ir <- 0
         vnam<-vnam2
-
-
-
   # Catch series
       ir <- match('TOTALCATCH', ifile) # find the matching name in the ifile set
       catun = as.numeric(ifile[skipp+ir]);
@@ -160,4 +157,5 @@ ifile <- scan(fn, what="character", skip=skipp,blank.lines.skip=FALSE, flush=TRU
        }
      }
    }
+}
 }

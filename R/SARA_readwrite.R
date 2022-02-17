@@ -1,7 +1,7 @@
-#'
 #' SARA report files into dataframes 
-#' @export
+#'
 #' @return  update from last year's files
+#' @export
 SARA_readwrite <- function(){
 flist=list.files("data-raw",pattern="*.dat");
 for (fnam in flist){
