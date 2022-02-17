@@ -1,8 +1,9 @@
-#SARA_readwrite <- function(load_oracle=F)
-#{
-load_oracle=F
+#'
+#' SARA report files into dataframes 
+#' @export
+#' @return  update from last year's files
+SARA_readwrite <- function(){
 flist=list.files("data-raw",pattern="*.dat");
-#fnam=flist[1]
 for (fnam in flist){
   print(fnam)
   fn <- paste0("data-raw/",fnam)
@@ -264,35 +265,10 @@ for (fnam in flist){
     }
   }
   }
-  # load into oracle OR NOT
-  if (load_oracle){
-  #sqlSave(channel, s1, tablename="JIANELLI.SARASTOCK", append=TRUE, rownames = FALSE, verbose = TRUE);
-  #sqlSave(channel, m1, tablename="JIANELLI.MODSTOCK", append=TRUE, rownames = FALSE, verbose = FALSE);
-  #sqlSave(channel, m2, tablename="JIANELLI.MODSTATS", append=TRUE, rownames = FALSE, verbose = FALSE);
-  } else{
+  } 
     sara_stock <- rbind(sara_stock,s1)
     mod_stock  <- rbind(mod_stock,m1)
     mod_stats  <- rbind(mod_stats,m2)
-  }
-
-  if (crabflag == 1){
-    #sqlSave(channel, c1, tablename="JIANELLI.SARASERIES", append=TRUE, rownames = FALSE, verbose = FALSE);
-    #sqlSave(channel, c2, tablename="JIANELLI.SARASERIES", append=TRUE, rownames = FALSE, verbose = FALSE);
-    #sqlSave(channel, c3, tablename="JIANELLI.SARASERIES", append=TRUE, rownames = FALSE, verbose = FALSE);
-  }
-  if(flines > 1 &&  crabflag == 0){
-    #sqlSave(channel, m3, tablename="JIANELLI.MODFISHERY", append=TRUE, rownames = FALSE, verbose = FALSE);
-  } 
-  if(xlines > 0 &&  crabflag == 0){
-    #sqlSave(channel, a1, tablename="JIANELLI.AGEMATURE", append=TRUE, rownames = FALSE, verbose = FALSE);
-    ##sqlSave(channel, a2, tablename="JIANELLI.AGENAT", append=TRUE, rownames = FALSE, verbose = FALSE);
-    if (sjoin %in% c("PCODEBS2015","PCODGOA2015","NROCKSOLEGOA2015","SROCKSOLEGOA2015")){
-      cat("note=",sjoin,"skips AGESELECT.\n",file="", sep=" ");
-    } else {
-      #sqlSave(channel, a3, tablename="JIANELLI.AGESELECT", append=TRUE, rownames = FALSE, verbose = FALSE);
-    }
-  }
-
   # SARASERIES   surveys
   ir         <- match('SURVEYDESC', ifile) # find the matching name in the ifile set
   surveylist <- scan(fn, skip=skipp+ir, nlines=1,quiet=TRUE, what="character");
@@ -314,13 +290,8 @@ for (fnam in flist){
       dum3 <- NA
       v    <- data.frame(STOCKJOIN= sjoin, SERIESNAME=surveylist[i], SERIESYEAR=dum, SERIESAMT=dum2 * surveymult[i],
                 AMT_MULTIPLIER=1 ,AMT_VARIANCE=dum3);
-      if (load_oracle){
-          #sqlSave(channel, v, tablename="JIANELLI.SARASERIES", append=TRUE, rownames = FALSE, verbose = FALSE);
-      } else{
         sara_series  <- rbind(sara_series,v)
         print(tail(sara_series[,1:4],3))
-      }
     }
   }
 }  
-#}  
