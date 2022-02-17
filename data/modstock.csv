@@ -1,0 +1,81 @@
+"","STOCKJOIN","RECRUIT_MULTIPLIER","RECRUIT_AGE_OR_SIZE","AGE_OR_MMCW_PLUS","FMORT_TYPE","FMORT_SOURCE","FMORT_RANGE","MODEL","VERSION","BMSY"
+"1","POLLOCKEBS2016",1e+06,1,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","pm2016",2165100
+"2","BLACKSPOTTEDGOA2016",1e+06,3,3,"Single age","Age model","Age of maximum F","Custom AMAK",NA,7198
+"3","NROCKSOLEGOA2016",1000,0,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","SS-V3.24S",18100
+"4","SROCKSOLEGOA2016",1000,0,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","SS-V3.24S",32700
+"5","PCODEBS2015",1000,0,0,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","SS-V3.24U",282000
+"6","POLLOCKWCWYK2015",1e+06,1,3,"Apical F","Model","Age of maximum F",NA,NA,262344
+"7","BLACKSPOTTEDGOA2015",1e+06,3,3,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB","AMAK",7198
+"8","DUSKYGOA2015",1e+06,4,4,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,17244
+"9","NORKBSAI2015",1000,3,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB",NA,50547
+"10","AKSKATEBSAI2015",1000,0,0,"single age","Model","Age of maximum F","statistical age-structured model using ADMB","SS-V3.23",65423
+"11","FLATHEADBSAI2015",1,3,3,"Apical F","Age model","Age at Maximum F","statistical age-structured model using ADMB",NA,111722
+"12","FLATHEADGOA2015",1000,0,0,"Apical F","Age model","Age at Maximum F","statistical age-structured model using ADMB","SS-V3.24",32258
+"13","KAMCHATKABSAI2015",1000,1,1,"Single	age","Age model","Age of	maximum	F","statistical age-structured model using ADMB",NA,46400
+"14","NROCKSOLEBSAI2015",1e+06,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,275000
+"15","BLACKSPOTTEDBSAI2015",1000,3,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB",NA,9977
+"16","POPBSAI2015",1000,3,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB",NA,148053
+"17","DOVERGOA2015",1000,0,0,"Apical F","Age model","Age at Maximum F","statistical age-structured model using ADMB","SS-V3.24",19855
+"18","PLAICEBSAI2015",1e+06,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,115087
+"19","YFINBSAI2015",1e+06,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,435000
+"20","POLLOCKWCWYK2016",1e+06,1,3,"Apical F","Model","Age of maximum F",NA,NA,233536
+"21","SROCKSOLEGOA2015",1000,0,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","SS-V3.24S",32700
+"22","BLACKSPOTTEDBSAI2016",1000,3,3,"Apical F","Model","Age of maximum F","ADMB",NA,7272
+"23","SABLEFISHAK2015",1e+06,2,2,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB","Custom AMAK",89956
+"24","NROCKSOLEGOA2015",1000,0,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","SS-V3.24S",18100
+"25","SNOWCRABEBS2015",1e+06,NA,25,"fully-selected males in directed fishery","Size-based model","fully-selected males in directed fishery","Size-based model using ADMB",NA,146357
+"26","PCODGOA2015",1000,0,3,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","SS-V3.24S",113800
+"27","SABLEFISHAK2016",1e+06,2,2,"Single age","Age model","Age of maximum F","Custom",NA,926064
+"28","NORKBSAI2016",1000,3,3,"Apical F","Model","Age of maximum F","ADMB",NA,57636
+"29","POPBSAI2016",1000,3,3,"Apical F","Model","Age of maximum F","ADMB",NA,187849
+"30","TURBOTBSAI2016",1000,0,1,"Single age","Age model","Age of maximum F","SS","SS-V3.24",36084
+"31","PCODEBS2016",1000,0,0,"Apical F","Model","Age of maximum F","Stock Synthesis","3.24u",217000
+"32","ATFGOA2016",1,1,1,"Single age","Age model","Age of maximum F","ADMB",NA,347295
+"33","POLLOCKAI2016",1e+06,0,1,"Apical F","Model","Age of maximum F","AMAK","2014",71085
+"34","REDKINGBRIST2015",1e+06,NA,65,"fully-selected males in directed fishery","Size-based model","fully-selected males in directed fishery","Size-based model using ADMB",NA,26100
+"35","NORKGOA2016",1e+06,2,2,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,24485
+"36","TANNEREBS2015",1000,NA,25,"fully-selected males in directed fishery","Size-based model","fully-selected males in directed fishery","Size-based model using ADMB",NA,26791
+"37","POPGOA2016",1e+06,2,2,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,99865
+"38","ATFBSAI2016",1,1,1,"Single age","Age model","Age of maximum F","ADMB",NA,185547
+"39","NORKGOA2015",1e+06,2,2,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,24485
+"40","POLLOCKAI2015",1e+06,0,1,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","AMAK2014",72437
+"41","AKSKATEBSAI2016",1000,0,1,"single age","Model","Age of maximum F","SS","SS-V3.23",126388
+"42","POPGOA2015",1e+06,2,2,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,99865
+"43","TURBOTBSAI2015",1000,0,1,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","SS-V3.24",44255
+"44","ATFBSAI2015",1,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,194266
+"45","ATFGOA2015",1,1,1,"Single","Age","Age","statistical age-structured model using ADMB",NA,347295
+"46","TANNEREBS2016",1,NA,25,"fully-selected males in directed fishery","Size-based model","fully-selected males in directed fishery","Size-based model using ADMB",NA,25650
+"47","ATKABSAI2015",1000,1,3,"Apical","Model","Age","statistical age-structured model using ADMB","Amak2015",118697
+"48","POLLOCKEBS2015",1e+06,1,3,"Apical","Model","Age","statistical age-structured model using ADMB","pm2015",1984200
+"49","DUSKYGOA2016",1e+06,4,4,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,17244
+"50","PLAICEBSAI2016",1e+06,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,96700
+"51","ATKABSAI2016",1000,1,1,"Apical F","Model","Age of maximum F","statistical age-structured model using ADMB","Amak2016",109627
+"52","YFINBSAI2016",1e+06,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,424000
+"53","KAMCHATKABSAI2016",1000,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,44400
+"54","NROCKSOLEBSAI2016",1e+06,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,357000
+"55","PCODGOA2016",1000,0,3,"Single age","Age model","Age of maximum F","SS","SS-V3.24",164341
+"56","AKPLAICEBSAI2017",1e+06,1,1,"Single","Age","Age","statistical age-structured model using ADMB",NA,111100
+"57","ATFBSAI2017",1,1,1,"Single","Age","Age","statistical age-structured model using ADMB",NA,212054
+"58","ATFGOA2017",1,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,369858
+"59","ATKABSAI2017",1000,1,1,"Apical F","Model","Age of maximum F","statistical age-structured model programmed in ADMB","Amak2016",107500
+"60","AKPLAICEBSAI2017",1e+06,1,1,"Single","Age","Age","statistical age-structured model using ADMB",NA,111100
+"61","ATFBSAI2017",1,1,1,"Single","Age","Age","statistical age-structured model using ADMB",NA,212054
+"62","ATFGOA2017",1,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,369858
+"63","ATKABSAI2017",1000,1,1,"Apical F","Model","Age of maximum F","statistical age-structured model programmed in ADMB","Amak2016",107500
+"64","BLACKSPOTTEDBSAI2017",1000,3,3,"Apical F","Model","Age of maximum F","ADMB",NA,7272
+"65","FLATHEADGOA2017",1000,0,3,"Apical F","Age model","Age at Maximum F","statistical age-structured model using ADMB","SS-V3.24",32043
+"66","KAMCHATKABSAI2017",1000,1,1,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,44433
+"67","NORKBSAI2017",1000,3,3,"Apical F","Model","Age of maximum F","ADMB",NA,57636
+"68","NORKGOA2017",1e+06,2,2,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,24485
+"69","NROCKSOLEGOA2017",1000,0,3,"Apical F","Model","Age of maximum F","SS","V3.30",18044
+"70","PCODEBS2017",1000,0,0,"Apical F","Model","Age of maximum F","Stock Synthesis","3.30.08.03",207000
+"71","PCODGOA2017",1000,0,3,"Single age","Age model","Age of maximum F","SS","SS-V3.24u",59004
+"72","POLLOCKEBS2017",1e+06,1,3,"Apical F","Model","Age of maximum F","statistical age - structured model programmed in ADMB","pm2016",2042500
+"73","POLLOCKWCWYK2017",1e+06,1,3,"Apical F","Model","Age of maximum F",NA,NA,208587
+"74","POPBSAI2017",1000,3,3,"Apical F","Model","Age of maximum F","ADMB",NA,187849
+"75","POPGOA2017",1e+06,2,2,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB",NA,102767
+"76","ROUGHEYEGOA2017",1e+06,3,3,"Single age","Age model","Age of maximum F","statistical age-structured model using ADMB.",NA,7872.47
+"77","SABLEAK2017",1e+06,2,2,"Single age","Age model","Age of maximum F","Custom",NA,86.0402
+"78","SROCKSOLEGOA2017",1000,0,3,"Apical F","Model","Age of maximum F","SS","V3.30",32752
+"79","TURBOTBSAI2017",1000,0,1,"Single age","Age model","Age of maximum F","SS","SS-V3.24",36084
+"80","YFINBSAI2017",1e+06,1,1,"Single age","Age model","Age of maximum F","ADMB",NA,456000

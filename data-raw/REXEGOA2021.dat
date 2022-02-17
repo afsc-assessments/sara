@@ -1,0 +1,62 @@
+REX_EASTERN     # stock 
+GOA       # region     (AI AK BOG BSAI EBS GOA SEO WCWYK)
+2021       # ASSESS_YEAR - year assessment is presented to the SSC 
+3a         # TIER  (1a 1b 2a 2b 3a 3b 4 5 6) 
+none       # TIER2  if mixed (none 1a 1b 2a 2b 3a 3b 4 5 6) 
+full  # UPDATE (new benchmark full partial) 
+
+7087      # Minimum B  Lower 95% confidence interval for spawning biomass in assessment year 
+10918      # Maximum B  Upper 95% confidence interval for spawning biomass in assessment year 
+3149.335      # BMSY  is equilibrium spawning biomass at MSY (Tiers 1-2) or 7/8 x B40% (Tier 3) 
+statistical age-structured model using ADMB      # MODEL - Required only if NMFS toolbox software used; optional otherwise 
+3.30   # VERSION - Required only if NMFS toolbox software used; optional otherwise 
+2          # number of sexes  if 1 sex=ALL elseif 2 sex=(FEMALE, MALE) 
+1          # number of fisheries 
+1000       # multiplier for recruitment, N at age, and survey number (1,1000,1000000)
+0          # recruitment age used by model 
+0          # Age+ used for biomass estimate 
+"Apical F"          # Fishing mortality type such as Single age or exploitation rate 
+"Age model"          # Fishing mortality source such as Model or (total catch (t))/(survey biomass (t)) 
+"Age at Maximum F"         # Fishing mortality range such as: Age of maximum F 
+#FISHERYDESC -list of fisheries (ALL TWL LGL POT FIX FOR DOM TWLJAN LGLMAY POTAUG ...) 
+ALL 
+#FISHERYYEAR -list years used in model 
+1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 
+#AGE -list ages used in model 
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+#RECRUITMENT -Number of recruits by year (see multiplier above) 
+29284.4 34901.3 36882 38391.2 31807.8 34930.3 19315.4 14226.2 14877.8 11971.2 13814.7 14756.8 14910 17837.6 23207.1 39399.1 48412.7 48011.8 34853.3 26184.6 24631.4 44478.8 36585.9 53984.5 27530.4 24978.4 15722.1 15038.7 20005.3 20674.9 14120.7 11356.3 22059.3 94465.1 62323.5 43424.5 29584.9 28430.3 30339.3 30339.3
+#SPAWNBIOMASS -Spawning biomass by year in metric tons 
+7050.36 6901.68 6780.68 6692.09 6656.6 6712.28 6900.32 7224.33 7635.44 8047.43 8373.52 8540.39 8487.32 8226.72 7841.54 7412.31 6999.79 6645.19 6385.06 6275.83 6399.85 6809.64 7438.8 8096.64 8597.6 8892.04 9103.48 9371.06 9716.27 10037.9 10170.7 10034.1 9680.15 9220.93 8757.33 8317.93 7932.88 7728.48 7980.02 8796.62 
+#TOTALBIOMASS -Total biomass by year in metric tons (see age+ above) 
+16178.2 16046.7 16042.4 16260.4 16715.9 17404.6 18169.6 18862.9 19432.4 19645.5 19465.1 18972.9 18250.2 17436.9 16649.4 16013.3 15611.9 15531.9 15903.5 16749.1 17900.1 19098.4 20029.5 20782.7 21470.2 22134.4 22865.2 23328 23434 23105 22408.7 21536.6 20651.2 20043.7 19462.9 19224.7 20113.1 21626.6 23163.1 24299.5 
+#TOTFSHRYMORT -Fishing mortality rate by year 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+#TOTALCATCH -Total catch by year in metric tons 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#MATURITY -Maturity ratio by age
+0 0 0.0464643 0.129096 0.310785 0.578365 0.806681 0.926974 0.974757 0.991559 0.997209 0.999081 0.999698 0.999901 0.999967 0.999989 0.999996 0.999999 1 1  # Season 1
+#SPAWNWT -Average Spawning weight (in kg) by age
+0.0075176 0.0147918 0.0465767 0.0894985 0.135316 0.178464 0.216148 0.247502 0.272752 0.292631 0.308033 0.319832 0.328796 0.335564 0.340653 0.344466 0.347317 0.349444 0.35103 0.352947  # Season 1
+#NATMORT -Natural mortality rate by age (a line for each sex)
+0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17  # Season 1
+0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17 0.17  # Season 1
+#N_AT_AGE -N at age by age (see number multiplier above)(a line for each sex)
+15169.7 12798.1 10117.9 8882.8 10999.8 13319 17031.8 3355.45 1457.36 1528.82 1888.49 1541.64 977.734 862.36 1155.88 1074.81 1778.11 1016.65 1042.75 487.179 3212.87  # Season 1
+15169.7 12798.1 10117.9 8882.8 10999.8 13319 17031.8 3355.45 1457.36 1528.82 1888.49 1541.64 977.734 862.36 1155.88 1074.81 1778.11 1016.65 1042.75 487.179 3212.87  # Season 1
+#FSHRY_WT_KG -Fishery weight at age (in kg) first FEMALES/ALL (a line for each fishery) then MALES (a line for each fishery)
+0.0106568 0.0287259 0.0672077 0.112466 0.157455 0.198078 0.23262 0.260851 0.283308 0.300835 0.314332 0.324625 0.332419 0.338291 0.342697 0.345995 0.348458 0.350295 0.351663 0.353331  # FemalesFishery - Season 1
+0.0137397 0.0332596 0.0675328 0.104396 0.139022 0.16908 0.1939 0.213723 0.229197 0.241084 0.250111 0.25691 0.262001 0.265796 0.268616 0.270706 0.272254 0.273398 0.274242 0.275256  # MalesFishery - Season 1
+#SELECTIVITY -Fishery selectivity first FEMALES/ALL (a line for each fishery) then MALES (a line for each fishery)
+1.13543e-05 0.000262461 0.00366443 0.0308393 0.156427 0.478217 0.881161 0.999771 0.999996 0.999999 1 1 1 1 1 1 1 1 1 1  # FemalesFishery - Season 1
+7.51073e-06 0.000440068 0.0109761 0.115817 0.516915 0.976331 0.999961 0.999998 1 1 1 1 1 1 1 1 1 1 1 1  # MalesFishery - Season 1
+# set of survey names - none EBS_trawl_biomass_mtons BS_slope_trawl_biomass_mtons AI_trawl_biomass_mtons GOA_trawl_biomass_mtons Acoustic_trawl_biomass_mtons AFSC_longline_relative_numbers Coop_longline_relative_numbers not_listed
+#SURVEYDESC
+GOA_trawl_biomass_mtons
+#SURVEYMULT
+1 # survey units multipliers
+GOA_trawl_biomass_mtons
+1990	1993	1996	1999	2003	2005	2007	2009	2011	2013	2015	2017	2019	2021
+16313.3	20900.8	19560.1	19464.1	28658.6	27795.3	15671.9	22872.8	18680.9	22913.2	22473.5	20352.3	24243	26123.9
+#STOCKNOTES
+"SAFE report indicates that this stock was not subjected to overfishing in 2020 and is neither overfished nor approaching a condition of being overfished in 2021.   "
