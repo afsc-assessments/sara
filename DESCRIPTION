@@ -3,7 +3,7 @@ Type: Package
 Title: This is a package for the AFSC Groundfish stock assessment results
 Version: 1.0
 Date: 2022-02-18
-Imports: stringr
+Depends: tidyverse
 Suggests: 
     rmarkdown,knitr, 
 Authors@R: person("Ianelli", "Jim", , "Jim.Ianelli@noaa.gov", role = c("aut", "cre"))
@@ -13,5 +13,5 @@ Maintainer: Jim Ianelli- NOAA Federal <jim.ianelli@noaa.gov>
 License: GPL-2
 LazyData: false
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 VignetteBuilder: knitr

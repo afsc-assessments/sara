@@ -30,10 +30,11 @@ my_inc <- 4
 #assign(tolower(ts[i]),read.csv(file=paste(tolower(ts[i]),".csv",sep=""))) }
 
 sarastocknames<-read.csv("data/sarastocknames.csv",header=T)
-source("R/SARA_R.R")
+#source("R/SARA_R.R")
+SARA()
 #### make graphs  
 
-sara_stock<-sara_stock[sara_stock$ASSESSYEAR==2020,]
+sara_stock<-sara_stock[sara_stock$ASSESSYEAR==2021,]
 mod_stats<-mod_stats[mod_stats$STOCKJOIN%in%unique(sara_stock$STOCKJOIN),]
 
 

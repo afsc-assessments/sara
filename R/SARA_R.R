@@ -9,15 +9,12 @@ SARA <- function(){
   mod_stats  <- data.frame(read.csv("data/modstats.csv",as.is=T))[,-1]
   sara_names <- data.frame(read.csv("data/sarastocknames.csv",as.is=T))
 # Now append new stuff onto it
-source("R/SARA_readwrite.R")
-source("R/SARA_readwrite_form.R")
-#tail(sara_series[,1:4])
-#tail(sara_stock[,1:4])
-#ls()
-  write.csv(sara_series,"../saraseries.csv")
-  write.csv(sara_stock,"../sarastock.csv")
-  write.csv(mod_stock,"../modstock.csv")
-  write.csv(mod_stats,"../modstats.csv")
+SARA_readwrite()
+SARA_readwrite_form()
+  #write.csv(sara_series,"data/saraseries.csv")
+  #write.csv(sara_stock,"data/sarastock.csv")
+  #write.csv(mod_stock,"data/modstock.csv")
+  #write.csv(mod_stats,"data/modstats.csv")
   
 library(openxlsx)
 wb <- createWorkbook("Fred")
