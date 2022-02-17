@@ -10,7 +10,7 @@ SARA <- function(){
   sara_names <- data.frame(read.csv("data/sarastocknames.csv",as.is=T))
 # Now append new stuff onto it
 SARA_readwrite()
-SARA_readwrite_form()
+#SARA_readwrite_form()
   #write.csv(sara_series,"data/saraseries.csv")
   #write.csv(sara_stock,"data/sarastock.csv")
   #write.csv(mod_stock,"data/modstock.csv")
