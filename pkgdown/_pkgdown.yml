@@ -1,0 +1,68 @@
+url: https://nmfs-fish-tools.github.io/pkgdownTemplate/
+
+navbar:
+  structure:
+    left:
+    - home
+    - reference
+    - sourcecode
+    - issue
+    - articles
+    - documents
+    - news
+    right: github
+    
+  components:
+    home:
+      icon: fas fa-home fa-lg
+      href: index.html
+
+    reference:
+      text: Functions
+      icon: far fa-file-code fa-lg
+      href: reference/index.html
+
+    sourcecode:
+      text: Source Code
+      icon: fab fa-github fa-lg
+      href: https://github.com/nmfs-fish-tools/pkgdownTemplate
+
+    issue:
+      text: Issues
+      icon: fas fa-question-circle fa-lg
+      href: https://github.com/nmfs-fish-tools/pkgdownTemplate/issues/
+
+    articles:
+      text: Vignettes
+      icon: fas fa-file-contract fa-lg
+      href: articles/index.html
+      
+    documents:
+      text: References
+      icon: fas fa-book fa-lg
+      menu:
+      - text: Scoping Document
+        href: Scoping.pdf
+      - text: Background Page
+        href: Article.html
+
+reference:
+- title: Plot functions
+  contents:
+  - contains("plot")
+- title: Function functions
+  contents:
+  - contains("function")
+  
+news:
+  releases:
+  - text: "Version 1.0"
+    href: https://github.com/nmfs-fish-tools/pkgdownTemplate/releases/tag/v1.0
+
+authors:
+  Elizabeth Holmes:
+    href: https://github.com/eeholmes
+  Bai Li:
+    href: https://github.com/Bai-Li-NOAA
+  Christine Stawitz:
+    href: https://github.com/ChristineStawitz-NOAA
