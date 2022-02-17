@@ -5,8 +5,8 @@ Version: 1.0
 Date: 2022-02-18
 Imports: stringr
 Suggests: 
-    rmarkdown,
-    knitr
+    rmarkdown,knitr, 
+VignetteBuilder: knitr
 Authors@R: person("Ianelli", "Jim", , "Jim.Ianelli@noaa.gov", role = c("aut", "cre"))
 URL: https://github.com/afsc-assessments/sara 
 BugReports: https://github.com/afsc-assessments/sara/issues
