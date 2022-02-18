@@ -14,15 +14,42 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+library(tidyverse)
+library(scales)
 ```
+This shows some rudimentary ways to access the stock assessment results archive.
 
-Vignettes are long form documentation commonly included in packages. Because they are part of the distribution of the package, they need to be as compact as possible. The `html_vignette` output type provides a custom style sheet (and tweaks some options) to ensure that the resulting html is as small as possible. The `html_vignette` format:
+## Installation Instructions
+This function likely depends on R version >=4.0.
 
-- Never uses retina figures
-- Has a smaller default figure size
-- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
+Ensure that the "devtools" package from CRAN is installed
 
-## Vignette Info
+    # Install and load devtools package
+    install.packages("devtools")
+    library("devtools")
+
+Next, install the SARA package from this GitHub repository using a function in the "devtools" package.  This may require using the `INSTALL_opts` option depending upon your version of R:
+
+    # Install package
+    install_github("afsc-assessments/SARA", INSTALL_opts="--no-staged-install")
+    # Load package
+    library(SARA)
+
+
+
+## Accessing some results
+Invoking `SARA()` will filter through the individual assessment result files in 
+the data-raw directory and create a number of dataframes.
+
+`library(SARA)`
+`SARA()`
+`df<-tibble(left_join(mod_stats,sara_stock));names(df) <- tolower(names(df))`
+`glimpse(df)`
+`df |> filter(assessyear==2021) |> ggplot(aes(x=spawnbiomass,y=recruitment,label=fisheryyear)) + `
+`  geom_point(size=.2) + geom_smooth() + theme_minimal() + facet_wrap(stock~region,scale="free")`
+
+```{r,echo=FALSE}
+```
 
 Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
 

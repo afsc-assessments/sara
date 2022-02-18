@@ -1,0 +1,60 @@
+POLLOCK	#	stock																																																				
+EBS	#	region	(AI	AK	BOG	BSAI	EBS	GOA	SEO	WCWYK)																																												
+2018	#	ASSESS_YEAR	-	year	assessment	is	presented	to	the	SSC																																												
+1a	#	TIER	(1a	1b	2a	2b	3a	3b	4	5	6)																																											
+none	#	TIER2	if	mixed	(none	1a	1b	2a	2b	3a	3b	4	5	6)																																								
+full	#	UPDATE	(new	benchmark	full	partial)																																																
+2909250	#	Minimum	B	Lower	95%	confidence	interval	for	spawning	biomass	in	assessment	year	2018	3552.79	355.88	2909.25	4338.69	1000																																			
+4338690	#	Maximum	B	Upper	95%	confidence	interval	for	spawning	biomass	in	assessment	year																																									
+2279800	#	BMSY	is	equilibrium	female	spawning	biomass	at	MSY	(Tiers	1)																																											
+statistical age - structured model programmed in ADMB	#	MODEL																																																				
+pm2016	#	VERSION																																																				
+1	#	number	of	sexes	if	1	sex'ALL	elseif	2	sex'(FEMALE,	MALE)																																											
+1	#	number	of	fisheries																																																		
+1000000	#	multiplier	for	recruitment,	N	at	age,	and	survey	number	-1.10001E+11																																											
+1	#	recruitment	age	used	by	model																																																
+3	#	age+	used	for	biomass	estimate																																																
+"Apical F"	#	Fishing	mortality	type	such	as	Single	age	or	exploitation	rate																																											
+Model	#	Fishing	mortality	source	such	as	Model	or	(total	catch	(t))/(survey	biomass	(t))																																									
+"Age of maximum F"	#	Fishing	mortality	range	such	as	Age	of	maximum	F																																												
+#FISHERYDESC	-list	of	fisheries	(ALL	TWL	LGL	POT	FIX	FOR	DOM	...)																																											
+TWL																																																						
+#FISHERYYEAR	-list	years	used	in	model																																																	
+1964	1965	1966	1967	1968	1969	1970	1971	1972	1973	1974	1975	1976	1977	1978	1979	1980	1981	1982	1983	1984	1985	1986	1987	1988	1989	1990	1991	1992	1993	1994	1995	1996	1997	1998	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2011	2012	2013	2014	2015	2016	2017	2018
+#AGE	-list	ages	used	in	model																																																	
+1	2	3	4	5	6	7	8	9	10	11	12	13	14	15																																								
+#RECRUITMENT	-Number	of	recruits	by	year	(see	multiplier	above)																																														
+6294440	20951900	15011700	25590500	22171900	26244900	23562600	14401600	11755000	27009900	19772900	16758900	12831200	13276700	24458400	58151600	25871600	29475000	16662800	50955300	14281700	34580600	14019100	7524810	5573630	10770800	47657700	25052900	22026200	45352100	15169600	10371900	22524700	30739300	15088800	16347500	25565000	34834900	23412100	14270200	6451010	4629540	11769500	25225900	13623000	51287400	21394800	12826200	11188300	56864500	42237500	12693300	14502100	16709900	17373900
+#SPAWNBIOMASS	-Spawning	biomass	by	year	in	metric	tons	1000																																														
+516910	612078	711255	896282	1111730	1364340	1597510	1691530	1605900	1345420	993285	841952	853186	882505	882003	835625	923523	1515610	2317760	2896050	3136770	3432720	3706200	3880240	3908700	3530240	2845350	2125770	2212080	3038110	3353990	3537670	3536920	3349050	3089270	3123360	3155090	3178250	3000380	3169580	3274650	3006800	2464500	2042190	1523820	1615750	1861400	2249470	2596460	2873100	2731320	2827160	3511630	3838800	3552790
+#TOTALBIOMASS	-Total	biomass	by	year	in	metric	tons	(see	age+	above)																																												
+1744600	2124800	2277500	3504000	4011900	5105100	5757100	6209900	5902100	4729800	3474900	3585100	3515600	3426200	3250700	3087000	3856900	7314500	8448200	9556900	9428000	11615000	11039000	11734000	11125000	9422800	7536900	5920300	9065200	11181000	10957000	12508000	10751000	9395200	9422400	10390000	9582500	9335300	9698800	11657000	10999000	9197400	7035700	5683600	4651100	5837700	6185800	8788000	8722500	8547600	7855200	11345000	13293000	11785000	10202000
+#TOTFSHRYMORT	-Fishing	mortality	rate	by	year																																																	
+0.173154	0.178089	0.161421	0.251606	0.248793	0.254172	0.393371	0.574687	0.627562	0.691596	0.709531	0.578159	0.51058	0.456961	0.503896	0.531336	0.49893	0.378694	0.261946	0.233187	0.233705	0.239527	0.222272	0.164636	0.207635	0.2197	0.299025	0.363817	0.520477	0.355728	0.316404	0.321322	0.427228	0.413061	0.344999	0.234844	0.309936	0.299593	0.382753	0.410173	0.361427	0.329858	0.398116	0.427421	0.456136	0.383487	0.323687	0.449544	0.453887	0.429731	0.387099	0.412122	0.272209	0.317846	0.273669
+#TOTALCATCH	-Total	catch	by	year	in	metric	tons	1000																																														
+174792	230551	261678	550362	702181	862789	1256570	1743760	1874530	1758920	1588390	1356740	1177820	978370	979431	935714	958280	973502	955964	981450	1092060	1139680	1141990	859416	1228720	1229600	1455190	1195640	1390300	1326600	1329350	1264250	1192780	1124430	1102160	989680	1132710	1387200	1480770	1490780	1480550	1483020	1488030	1354500	990578	810784	810207	1199040	1205210	1270770	1297420	1321580	1352660	1359270	1373860
+#MATURITY	-Maturity	ratio	by	age																																																		
+0	0.008	0.289	0.641	0.842	0.901	0.947	0.963	0.97	1	1	1	1	1	1																																								
+#SPAWNWT	-Average	Spawning	weight	(in	kg)	by	age																																															
+0.0251823	0.181324	0.205144	0.531175	0.711553	0.812174	0.946655	1.04758	1.0746	1.20824	1.22769	1.30318	1.39321	1.37807	1.37181																																								
+#NATMORT	-Natural	mortality	rate	by	age	(a	line	for	each	sex)																																												
+0.9	0.45	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3																																								
+#N_AT_AGE	-N	at	age	by	age	(see	number	multiplier	above)(a	line	for	each	sex)																																									
+17373.9	6793.63	3757.19	2410.38	5446.24	4037.76	475.982	319.724	277.507	373.067	60.3944	31.8342	7.72659	1.68037	4.52684																																								
+#FSHRY_WT_KG	-Fishery	weight	at	age	(in	kg)	first	FEMALES/ALL	(a	line	for	each	fishery)	then	MALES	(a	line	for	each	fishery)																																		
+0.0251823	0.181324	0.205144	0.531175	0.711553	0.812174	0.946655	1.04758	1.0746	1.20824	1.22769	1.30318	1.39321	1.37807	1.37181																																								
+#SELECTIVITY	-Fishery	selectivity	first	FEMALES/ALL	(a	line	for	each	fishery)	then	MALES	(a	line	for	each	fishery)																																						
+7.05E-05	0.00299101	0.0518714	0.417257	0.873609	1.57014	1.53906	1.4533	1.29998	1.29862	1.29862	1.29862	1.29862	1.29862	1.29862																																								
+#	set	of	survey	names	-	none	EBS_trawl_biomass_mtons	BS_slope_trawl_biomass_mtons	AI_trawl_biomass_mtons	GOA_trawl_biomass_mtons	Acoustic_trawl_biomass_mtons	AFSC_longline_relative_numbers	Coop_longline_relative_numbers	not_listed																																								
+#SURVEYDESC																																																						
+EBS_trawl_relative_biomass	Acoustic_trawl_relative_biomass																																																					
+#SURVEYMULT		#	survey	units	multipliers																																																	
+1000	1000	
+#EBS_trawl_relative_biomass																																																						
+1982	1983	1984	1985	1986	1987	1988	1989	1990	1991	1992	1993	1994	1995	1996	1997	1998	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2011	2012	2013	2014	2015	2016	2017	2018																		
+4069.210419	8409.192322	6408.68334	8250.365179	6825.572169	7892.194066	11088.28364	9795.795211	11899.77443	7389.523346	6210.927575	7089.352255	7100.03131	9107.058623	4079.746944	5019.416752	3509.910059	5454.721391	7355.106687	5439.751954	6770.722978	13508.10474	5105.803667	6696.467023	3886.151484	6145.11096	3994.328355	2989.696394	5131.69891	3948.603132	4613.87077	6114.896548	10331.24582	8587.401763	6607.636871	6256.373881	4187.423749																		
+#Acoustic_trawl_relative_biomass																																																						
+1994	1996	1997	1999	2000	2002	2004	2006	2007	2008	2009	2010	2012	2014	2016	2018																																							
+3640.106	2955.115	3590.695	4202.143	3613.94	4330.008	4016.18	1887.421	2288.07	1407.479	1323.06	2651.176	2298.941	4726.599	4828.889687	2499.401064																																							
+#STOCKNOTES																																																					
+"Model 16.1"

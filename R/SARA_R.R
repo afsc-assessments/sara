@@ -8,6 +8,7 @@ SARA <- function(){
   mod_stock  <- data.frame(read.csv("data/modstock.csv",as.is=T))[,-1]
   mod_stats  <- data.frame(read.csv("data/modstats.csv",as.is=T))[,-1]
   sara_names <- data.frame(read.csv("data/sarastocknames.csv",as.is=T))
+  sarastocknames<-read.csv("data/sarastocknames.csv",header=T)
 # Now append new stuff onto it
 SARA_readwrite()
 #SARA_readwrite_form()

@@ -1,43 +1,17 @@
-### Script for making some Council meeting graphs 12/2/2016, hanselman
-## start off by setting to source location
-library(ggplot2)
 library(tidyverse)
-library(grid)
-library(gridExtra)
 library(scales)
-
-my_inc <- 4
-
-#Get some data tables from AFSC
-#library(RODBC)
-#database_afsc="afsc"
-#username_afsc="hanselmd"
-#password_afsc=""
-#channel=odbcConnect(database_afsc,uid=username_afsc,pwd=password_afsc,believeNRows=FALSE)
 
 # Get SARA data
 ########## I don't remember what this did or how I got the .csvs I read in below
-#ts<-sqlTables(channel,schema="AGREIG")[,3]
-#write(ts,"ts.csv")
-#for(i in 1:length(ts)) {
-#assign(tolower(ts[i]),sqlFetch(channel,paste("AGREIG.",ts[i],sep=""))) 
-#write.csv(get(tolower(ts[i])),file=paste(tolower(ts[i]),".csv",sep=""),row.names=FALSE) }
-
-### Read files back in for offline mode
-#ts<-as.character(read.csv("ts.csv",header=F)[,1])
-#ts<-ts[-c(4,5,6,7,8,9,10,14,15,20)]
-#for(i in 1:length(ts)) {
-#assign(tolower(ts[i]),read.csv(file=paste(tolower(ts[i]),".csv",sep=""))) }
-
-sarastocknames<-read.csv("data/sarastocknames.csv",header=T)
-#source("R/SARA_R.R")
+# Grab up the data in the data-raw directory
 SARA()
 #### make graphs  
-
 sara_stock<-sara_stock[sara_stock$ASSESSYEAR==2021,]
 mod_stats<-mod_stats[mod_stats$STOCKJOIN%in%unique(sara_stock$STOCKJOIN),]
+df<-tibble(left_join(mod_stats,sara_stock));names(df) <- tolower(names(df))
+glimpse(df)
 
-
+?merge
 m2<-merge(mod_stats,mod_stock,all.x=TRUE)
 m2<-merge(m2,sara_stock,all.x=TRUE)
 m2<-merge(m2,sarastocknames,all.x=TRUE)

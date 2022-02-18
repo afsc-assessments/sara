@@ -1,0 +1,70 @@
+POLLOCK    # stock 																																																	
+WCWYK       # region     (AI AK BOG BSAI EBS GOA SEO WCWYK)																																																	
+2019       # ASSESS_YEAR - year assessment is presented to the SSC 																																																	
+3a         # TIER  (1a 1b 2a 2b 3a 3b 4 5 6) 																																																	
+none       # TIER2  if mixed (none 1a 1b 2a 2b 3a 3b 4 5 6) 																																																	
+full       # UPDATE (new benchmark full partial) 																																																	
+158541.0 # Minimum B  Lower 95% confidence interval for spawning biomass in assessment year 																																																	
+324164.3   # Maximum B  Upper 95% confidence interval for spawning biomass in assessment year 																																																	
+170000   # BMSY  is equilibrium spawning biomass at MSY (Tiers 1-2) or B35% (Tier 3) 																																																	
+NA         # MODEL - Required only if NMFS toolbox software used; optional otherwise 																																																	
+NA         # VERSION - Required only if NMFS toolbox software used; optional otherwise 																																																	
+1          # number of sexes  if 1 sex=ALL elseif 2 sex=(FEMALE, MALE) 																																																	
+1          # number of fisheries 																																																	
+1000000    # multiplier for recruitment, N at age, and survey number (1,1000,1000000)																																																	
+1          # recruitment age used by model 																																																	
+3          # age+ used for biomass estimate 																																																	
+"Apical F "# Fishing mortality type such as ""Single age"" or ""exploitation rate"""																																																	
+"Model    "# Fishing mortality source such as Model or ""(total catch (t))/(survey biomass (t))"""																																																	
+"Age of maximum F " # Fishing mortality range such as ""Age of maximum F"""																																																	
+#FISHERYDESC -list of fisheries (ALL TWL LGL POT FIX FOR DOM TWLJAN LGLMAY POTAUG ...) 																																																	
+TWL  																																																	
+#FISHERYYEAR -list years used in model 																																																	
+1970	1971	1972	1973	1974	1975	1976	1977	1978	1979	1980	1981	1982	1983	1984	1985	1986	1987	1988	1989	1990	1991	1992	1993	1994	1995	1996	1997	1998	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2011	2012	2013	2014	2015	2016	2017	2018	2019
+#AGE -list ages used in model 																																																	
+1 2 3 4 5 6 7 8 9 10 																																																	
+#RECRUITMENT -Number of recruits by year (see multiplier above) 																																																	
+1253.38	3145.99	3614.36	10429.6	2176.17	2190.94	8537.77	11488.5	14007.8	24828.1	12673.8	7060.62	7010.57	4799.23	5709.89	14125.3	4116.87	1712.54	4790.28	11029.5	8271.68	3186.13	2365.18	1661.69	1676.88	6608.35	3066.45	1392.93	1338.09	1670.05	6217.9	6601	925.712	713.487	668.104	1698.96	5431.72	5148.93	6249.3	2746.5	1044.25	4600.19	663.191	36170.8	2088.59	35.4677	4.40582	1944.03	5339.47	9390.8
+#SPAWNBIOMASS -Spawning biomass by year in metric tons 																																																	
+126743	120994	111601	94593.4	85311.7	90431.6	120021	134845	122466	128697	178166	196221	320774	447830	494827	446046	401265	374539	378079	393008	403212	395931	360207	392536	464132	387075	358033	317260	245248	227932	215967	201320	167829	155726	171912	208588	222546	195171	192946	190314	260291	302220	318862	338931	256134	230682	242658	323841	301645	226701
+#TOTALBIOMASS -Total biomass by year in metric tons (see age+ above) 																																																	
+533401	492704	458892	506700	567339	988036	882519	738205	951215	1322680	1774620	2766380	2884930	2622070	2321370	1863640	1555850	1880530	1779510	1570910	1451860	1753750	1838760	1733450	1471100	1202630	1012060	1037390	997860	739955	651633	620150	795420	994265	828643	687899	580278	536662	740745	1046250	1229580	1164340	1071510	1086580	847515	2185980	2171480	1563390	1096560	941477
+#TOTFSHRYMORT -Fishing mortality rate by year 																																																	
+0.0379599	0.0407542	0.188109	0.260945	0.34815	0.224284	0.301575	0.362734	0.338793	0.267701	0.204535	0.158395	0.129691	0.160657	0.218532	0.280701	0.0951965	0.0701894	0.0648865	0.0840371	0.0975387	0.14157	0.143388	0.143061	0.134761	0.0917484	0.079416	0.173464	0.305104	0.257157	0.189142	0.190681	0.136472	0.101554	0.114311	0.15631	0.154904	0.114606	0.094867	0.0627688	0.0902333	0.1005	0.127568	0.12918	0.24829	0.284935	0.190893	0.195696	0.225585	0.258516
+#TOTALCATCH -Total catch by year in metric tons 																																																	
+9379	9460	38131	44993	61905	59504	86731	118092	95408	106161	115158	147818	169045	215625	307541	286900	86910	68070	63391	75585	88269	100488	90858	108909	107335	72618	51263	90130	125460	95638	73080	72077	51933.5	50684	63844	80978	71976	52714	52584	44247	76744	81485	103970	96364	142633	167551	177133	186156	158095	125850
+#FISHERYMORT -Fishing mortality rates by year (a line for each fishery) only if multiple fisheries																																																	
+0.0379599	0.0407542	0.188109	0.260945	0.34815	0.224284	0.301575	0.362734	0.338793	0.267701	0.204535	0.158395	0.129691	0.160657	0.218532	0.280701	0.0951965	0.0701894	0.0648865	0.0840371	0.0975387	0.14157	0.143388	0.143061	0.134761	0.0917484	0.079416	0.173464	0.305104	0.257157	0.189142	0.190681	0.136472	0.101554	0.114311	0.15631	0.154904	0.114606	0.094867	0.0627688	0.0902333	0.1005	0.127568	0.12918	0.24829	0.284935	0.190893	0.195696	0.225585	0.258516
+#FISHERYCATCH -Catches by year (a line for each fishery) only if multiple fisheries																																																	
+9379	9460	38131	44993	61905	59504	86731	118092	95408	106161	115158	147818	169045	215625	307541	286900	86910	68070	63391	75585	88269	100488	90858	108909	107335	72618	51263	90130	125460	95638	73080	72077	51933.5	50684	63844	80978	71976	52714	52584	44247	76744	81485	103970	96364	142633	167551	177133	186156	158095	125850
+#MATURITY -Maturity ratio by age																																																	
+0.00000	0.01299	0.05590	0.27692	0.61217	0.86022	0.93921	0.97809	0.98910	0.99337																																								
+#SPAWNWT -Average Spawning weight (in kg) by age																																																	
+0.01067	0.10210	0.25004	0.47831	0.62346	0.73877	0.92348	1.04993	1.27068	1.31080																																								
+#NATMORT -Natural mortality rate by age (a line for each sex)																																																	
+1.39	0.69	0.48	0.37	0.34	0.3	0.3	0.29	0.28	0.29																																								
+#N_AT_AGE -N at age by age (see number multiplier above)(a line for each sex)																																																	
+9390.8	1329.5	241.93	0.327743	1.57634	54.6704	575.859	6.1937	25.1607	43.8297																																								
+#FSHRY_WT_KG -Fishery weight at age (in kg) first FEMALES/ALL (a line for each fishery) then MALES (a line for each fishery)																																																	
+0.16417	0.41451	0.57466	0.84551	1.02528	1.13903	1.14565	1.10169	1.20577	1.33023																																								
+#SELECTIVITY -Fishery selectivity first FEMALES/ALL (a line for each fishery) then MALES (a line for each fishery)																																																	
+0.00107382	0.01247057	0.1289222	0.6330992	0.9539022	0.9968746	1	0.991021	0.8799052	0.3487212																																								
+# set of survey names - none EBS_trawl_biomass_mtons BS_slope_trawl_biomass_mtons AI_trawl_biomass_mtons GOA_trawl_biomass_mtons Acoustic_trawl_biomass_mtons AFSC_longline_relative_numbers Coop_longline_relative_numbers not_listed																																																	
+#SURVEYDESC																																																	
+Acoustic_trawl_biomass_mtons GOA_trawl_biomass_mtons ADFG_GOA_crab_gf_mtons Summer_acoustic_biomass_mtons																																																	
+#SURVEYMULT																																																	
+1 1 1 1  # survey units multipliers																																																	
+#Acoustic_trawl_biomass_mtons																																																	
+1992	1993	1994	1995	1996	1997	1998	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2012	2013	2014	2015	2016	2017	2018	2019																								
+713429.012	435753	492593	763612	777172	583017	504774	448638	432749	256743	317268.98	330753.0266	356116.5008	293608.7178	180880.8763	197922.3117	257422.396	421575.2221	334060.6496	807837.6767	827337.6133	847969.5545	667002.7986	1465228.861	1320867.432	1281083.285																								
+#GOA_trawl_biomass_mtons																																																	
+1990	1993	1996	1999	2001	2003	2005	2007	2009	2011	2013	2015	2017	2019																																				
+817040.0608	747942.3295	659603.9625	601968.5153	220140.54	394333.3555	354208.8961	278540.5749	662556.5895	660207.1156	947876.763	707774.386	288943.271	257604.3324																																				
+#ADFG_GOA_crab_gf_mtons																																																	
+1989	1990	1992	1993	1994	1996	1997	1998	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2011	2012	2013	2014	2015	2016	2017	2018	2019																					
+214434	114451	127359	132849	103420	122477	93728	81215	53587	102871	86967	96237	66989	99358	79089	69044	76674	83476	145438	124110	100839	172007	102406	100158	42277	18470	21855	49788	50960																					
+#Summer_acoustic_biomass_mtons																																																	
+2013	2015	2017	2019																																														
+884049	1606171	1318396	580542.8883																																														
+#STOCKNOTES																																																	
+"Authors recommended Model 19.1.  SAFE report indicates that this stock was not subject to overfishing in 2018 and is neither overfished nor approaching a condition of being overfished in 2019.																																																	"

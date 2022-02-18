@@ -1,0 +1,59 @@
+PCOD	#	stock																																								
+EBS	#	region	(AI	AK	BOG	BSAI	EBS	GOA	SEO	WCWYK)																																
+2020	#	ASSESS_YEAR	-	year	assessment	is	presented	to	the	SSC																																
+3b	#	TIER	(1a	1b	2a	2b	3a	3b	4	5	6)																															
+none	#	TIER2	if	mixed	(none	1a	1b	2a	2b	3a	3b	4	5	6)																												
+full	#	UPDATE	(new	benchmark	full	partial)																																				
+230336	#	Minimum	B	Lower	95%	confidence	interval	for	spawning	biomass	in	assessment	year																													
+311571	#	Maximum	B	Upper	95%	confidence	interval	for	spawning	biomass	in	assessment	year																													
+230841	#	BMSY	is	equilibrium	spawning	biomass	at	MSY	(Tiers	1-2)	or	7/8	x	B40%	(Tier	3)																										
+Stock	Synthesis	#	MODEL																																							
+V3.30.16.02	#	VERSION																																								
+1	#	number	of	sexes	if	1	sex=ALL	elseif	2	"sex=(FEMALE,"	MALE)																															
+1	#	number	of	fisheries																																						
+1000	#	multiplier	for	"recruitment,"	N	at	"age,"	and	survey	number	"-110,001,000,000"																															
+0	#	recruitment	age	used	by	model																																				
+0	#	age+	used	for	biomass	estimate																																				
+Apical	F	#	Fishing	mortality	type	such	as	Single	age	or	exploitation	rate																														
+Model	#	Fishing	mortality	source	such	as	Model	or	(total	catch	(t))/(survey	biomass	(t))																													
+Age	of	maximum	F	#	Fishing	mortality	range	such	as	Age	of	maximum	F																													
+#FISHERYDESC	#NAME?	of	fisheries	(ALL	TWL	LGL	POT	FIX	FOR	DOM	TWLJAN	LGLMAY	POTAUG	...)																												
+ALL																																										
+#FISHERYYEAR	#NAME?	years	used	in	model																																					
+1977	1978	1979	1980	1981	1982	1983	1984	1985	1986	1987	1988	1989	1990	1991	1992	1993	1994	1995	1996	1997	1998	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2011	2012	2013	2014	2015	2016	2017	2018	2019	2020
+#AGE	#NAME?	ages	used	in	model																																					
+0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20																						
+#RECRUITMENT	#NAME?	of	recruits	by	year	(see	multiplier	above)																																		
+1132170	739151	770519	186118	210027	1000660	270127	902189	407253	224399	69365	324687	646249	633733	372504	1001350	374074	315110	269846	875470	384661	289356	716621	512671	208749	342846	324024	234255	288127	847621	334827	1238610	168461	772262	986556	469167	1259200	220895	293300	180633	127111	749855	527908	527908
+#SPAWNBIOMASS	#NAME?	biomass	by	year	in	metric	tons																																			
+94759	96809	98527	120579	177750	277948	370543	376036	421481	412760	403932	427604	415652	372877	297203	215632	204815	208736	223394	224482	220544	197660	192145	201843	210456	224871	229952	234237	228483	201696	175465	150420	134746	131558	158756	188043	212858	216417	222203	255903	296945	324018	322372	270954
+#TOTALBIOMASS	#NAME?	biomass	by	year	in	metric	tons	(see	age+	above)																																
+319795	344512	470781	669759	903652	1158560	1261780	1218190	1307340	1298170	1317970	1339020	1220500	1035380	861355	743115	842138	856283	912444	922799	804452	709192	747401	813440	836115	873165	861948	832922	760608	665127	587975	550820	586477	684027	814318	875833	906451	930673	1008490	1123180	1121510	1052380	941834	769925
+#TOTFSHRYMORT	#NAME?	mortality	rate	by	year																																					
+0.186	0.228	0.164	0.170	0.127	0.096	0.116	0.159	0.176	0.167	0.192	0.227	0.214	0.242	0.412	0.456	0.308	0.406	0.504	0.473	0.520	0.415	0.394	0.383	0.346	0.375	0.380	0.391	0.411	0.450	0.431	0.527	0.659	0.622	0.726	0.620	0.564	0.618	0.585	0.525	0.417	0.305	0.293	0.315
+#TOTALCATCH	#NAME?	catch	by	year	in	metric	tons																																			
+33335	42543	33761	45861	56507	61104	94801	125103	143447	135605	149903	203071	178323	172067	210241	164210	133186	172266	228498	209067	232601	158529	145867	151376	142542	166555	175443	183748	182940	168818	140129	139802	147174	142845	209224	232781	236699	238728	232838	247619	237838	199866	178816	155873
+#FISHERYMORT	#NAME?	mortality	rates	by	year	(a	line	for	each	fishery)	only	if	multiple	fisheries																												
+#FISHERYCATCH	#NAME?	by	year	(a	line	for	each	fishery)	only	if	multiple	fisheries																														
+#MATURITY	#NAME?	ratio	by	age																																						
+0.001	0.002	0.013	0.077	0.244	0.472	0.670	0.801	0.879	0.925	0.951	0.967	0.976	0.983	0.987	0.989	0.992	0.993	0.994	0.995	0.996
+#SPAWNWT	#NAME?	Spawning	weight	(in	kg)	by	age																																			
+0.00	0.01	0.16	0.64	1.38	2.32	3.37	4.50	5.65	6.79	7.91	8.98	10.00	10.96	11.84	12.59	13.65	14.19	14.83	15.36	16.10
+#NATMORT	#NAME?	mortality	rate	by	age	(a	line	for	each	sex)																																
+0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354	0.354
+#N_AT_AGE	#NAME?	at	age	by	age	(see	number	multiplier	above)(a	line	for	each	sex)																													
+527908	370400	369086	43820	41759	43723	19063	58675	11615	11448	3691	349	965	113	120	16	5	3	1	0	1
+#FSHRY_WT_KG	#NAME?	weight	at	age	(in	kg)	first	FEMALES/ALL	(a	line	for	each	fishery)	then	MALES	(a	line	for	each	fishery)
+0.00	0.03	0.49	1.15	2.42	3.22	4.26	5.26	6.13	7.17	8.31	9.23	10.37	11.21	12.04	12.85	13.63	14.29	14.98	15.42	16.25
+#SELECTIVITY	#NAME?	selectivity	first	FEMALES/ALL	(a	line	for	each	fishery)	then	MALES	(a	line	for	each	fishery)																										
+0.000	0.000	0.011	0.086	0.411	0.628	0.822	0.893	0.908	0.910	0.907	0.905	0.903	0.903	0.902	0.902	0.902	0.901	0.901	0.901	0.901
+#	set	of	survey	names	-	none	EBS_trawl_biomass_mtons	BS_slope_trawl_biomass_mtons	AI_trawl_biomass_mtons	GOA_trawl_biomass_mtons	Acoustic_trawl_biomass_mtons	AFSC_longline_relative_numbers	Coop_longline_relative_numbers	not_listed																												
+#SURVEYDESC																																										
+VAST_estimates_of_survey_abundance_in_the_combined_EBS_and_NBS																																										
+#SURVEYMULT																																										
+1000	#	survey	units	multipliers																																						
+#VAST_estimates_of_survey_abundance_in_the_combined_EBS_and_NBS																																										
+1982	1983	1984	1985	1986	1987	1988	1989	1990	1991	1992	1993	1994	1995	1996	1997	1998	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010	2011	2012	2013	2014	2015	2016	2017	2018	2019					
+650197	812539	707602	909591	866661	751521	526869	325110	468733	531106	586913	844514	1237164	774090	688756	529258	597020	546433	502691	1013907	612292	594287	436497	483100	427619	672233	499900	746783	830703	880834	1049101	729314	1237922	1072322	893494	519332	538496	773478					
+#STOCKNOTES																																										
+"Model estimates in this file correspond to model adopted by the SSC (Model 19.12a).  For time-varying age-specific quantities, values in the terminal year (2020) are shown."

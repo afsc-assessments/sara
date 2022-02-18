@@ -6,29 +6,16 @@ SARA_readwrite <- function() {
   flist = list.files("data-raw", pattern = "*.dat")
   
   fnam <- flist[12]
-  sara_series <-
-    data.frame(read.csv("data/saraseries.csv", as.is = T))[,-1]
-  sara_stock <-
-    data.frame(read.csv("data/sarastock.csv", as.is = T))[,-1]
-  mod_stock  <-
-    data.frame(read.csv("data/modstock.csv", as.is = T))[,-1]
-  mod_stats  <-
-    data.frame(read.csv("data/modstats.csv", as.is = T))[,-1]
-  sara_names <-
-    data.frame(read.csv("data/sarastocknames.csv", as.is = T))
+  sara_series<<- data.frame(read.csv("data/saraseries.csv", as.is = T))[,-1]
+  sara_stock <<- data.frame(read.csv("data/sarastock.csv", as.is = T))[,-1]
+  mod_stock  <<- data.frame(read.csv("data/modstock.csv", as.is = T))[,-1]
+  mod_stats  <<- data.frame(read.csv("data/modstats.csv", as.is = T))[,-1]
+  sara_names <<- data.frame(read.csv("data/sarastocknames.csv", as.is = T))
   for (fnam in flist) {
     print(fnam)
     fn <- paste0("data-raw/", fnam)
     skipp = 0			# skipp indicates the header lines to be skipped
-    myfile <-
-      scan(
-        fn,
-        what = "character",
-        skip = skipp,
-        flush = T,
-        blank.lines.skip = FALSE,
-        quiet = F
-      )
+    myfile <- scan( fn, what = "character", skip = skipp, flush = T, blank.lines.skip = FALSE, quiet = F )
     
     # SARASTOCK
     sjoin = paste(myfile[1], myfile[2], myfile[3], sep = "")
@@ -500,28 +487,10 @@ SARA_readwrite <- function() {
     # SARASERIES   surveys
     ir         <-
       match('SURVEYDESC', ifile) # find the matching name in the ifile set
-    surveylist <-
-      scan(
-        fn,
-        skip = skipp + ir,
-        nlines = 1,
-        quiet = TRUE,
-        what = "character"
-      )
-    
+    surveylist <- scan( fn, skip = skipp + ir, nlines = 1, quiet = TRUE, what = "character" )
     slen = length(surveylist)
-    
-    irr <-
-      match('SURVEYMULT', ifile) # find the matching name in the ifile set
-    surveymult = as.double(scan(
-      fn,
-      skip = skipp + irr,
-      nlines = 1,
-      n = slen,
-      quiet = TRUE,
-      what = "numeric"
-    ))
-    
+    irr <- match('SURVEYMULT', ifile) # find the matching name in the ifile set
+    surveymult = as.double(scan( fn, skip = skipp + irr, nlines = 1, n = slen, quiet = TRUE, what = "numeric" ))
     surfile = ifile[-(1:irr)]
     
     i = 1
@@ -532,28 +501,12 @@ SARA_readwrite <- function() {
         ir   <-
           match(surveylist[i], surfile) # find the matching name in the ifile set
         dum  <- NA
-        dum  <-
-          as.double(scan(
-            fn,
-            skip = skipp + irr + ir,
-            nlines = 1,
-            quiet = TRUE,
-            what = "numeric"
-          ))
+        dum  <- as.double(scan( fn, skip = skipp + irr + ir, nlines = 1, quiet = TRUE, what = "numeric" ))
         
         dum2 <- NA
-        dum2 <-
-          as.double(scan(
-            fn,
-            skip = skipp + irr + ir + 1,
-            nlines = 1,
-            quiet = TRUE,
-            what = "numeric"
-          ))
-        
+        dum2 <- as.double(scan( fn, skip = skipp + irr + ir + 1, nlines = 1, quiet = TRUE, what = "numeric" ))
         dum3 <- NA
-        v    <-
-          data.frame(
+        v    <- data.frame(
             STOCKJOIN = sjoin,
             SERIESNAME = surveylist[i],
             SERIESYEAR = dum,
@@ -561,13 +514,12 @@ SARA_readwrite <- function() {
             AMT_MULTIPLIER = 1 ,
             AMT_VARIANCE = dum3
           )
-        
-        sara_series  <- rbind(sara_series, v)
+        sara_series  <<- rbind(sara_series, v)
         print(tail(sara_series[, 1:4], 3))
       }
     }
-    sara_stock <- rbind(sara_stock, s1)
-    mod_stock  <- rbind(mod_stock, m1)
-    mod_stats  <- rbind(mod_stats, m2)
+    sara_stock <<- rbind(sara_stock, s1)
+    mod_stock  <<- rbind(mod_stock, m1)
+    mod_stats  <<- rbind(mod_stats, m2)
   }
 }
