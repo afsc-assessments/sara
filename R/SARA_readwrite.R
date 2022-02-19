@@ -15,7 +15,7 @@ SARA_readwrite <- function(dbg=FALSE) {
     if(dbg) print(fnam)
     fn <- paste0("data-raw/", fnam)
     skipp = 0			# skipp indicates the header lines to be skipped
-    myfile <- scan( fn, what = "character", skip = skipp, flush = T, blank.lines.skip = FALSE, quiet = F )
+    myfile <- scan( fn, what = "character", skip = skipp, flush = T, blank.lines.skip = FALSE, quiet = !dbg )
     
     # SARASTOCK
     sjoin = paste(myfile[1], myfile[2], myfile[3], sep = "")
@@ -70,12 +70,7 @@ SARA_readwrite <- function(dbg=FALSE) {
       BMSY = as.numeric(myfile[9])
     )
     
-    fisherylist = (scan(
-      fn,
-      skip = skipp + 20,
-      nlines = 1,
-      quiet = TRUE,
-      what = "character"
+    fisherylist = (scan( fn, skip = skipp + 20, nlines = 1, quiet = !dbg, what = "character"
     ))
     
     
@@ -88,7 +83,7 @@ SARA_readwrite <- function(dbg=FALSE) {
         skip = skipp,
         flush = T,
         blank.lines.skip = FALSE,
-        quiet = F
+        quiet = !dbg
       )
     iflex <- which(is.na(ifile))
     idx <- sapply(as.double(ifile), is.na)
@@ -134,7 +129,7 @@ SARA_readwrite <- function(dbg=FALSE) {
         fn,
         skip = skipp + ir,
         nlines = 1,
-        quiet = TRUE,
+        quiet = !dbg,
         what = "numeric"
       ))
     rlen = length(dum)
@@ -151,11 +146,7 @@ SARA_readwrite <- function(dbg=FALSE) {
       'TOTALCATCH'
     )
     for (i in 2:6) {
-      cat(sjoin,
-          cnam[i],
-          "input.\n",
-          file = "",
-          sep = " ")
+      if (dbg) cat(sjoin, cnam[i], "input.\n", file = "", sep = " ")
       
       ir <-
         match(cnam[i], ifile) # find the matching name in the ifile set
@@ -165,7 +156,7 @@ SARA_readwrite <- function(dbg=FALSE) {
           fn,
           skip = skipp + ir,
           nlines = 1,
-          quiet = TRUE,
+          quiet = !dbg,
           what = "numeric"
         ))
       #if (is.element(i,c(3,4,6))) dum=dum*mtmult;
@@ -192,7 +183,7 @@ SARA_readwrite <- function(dbg=FALSE) {
       TOTALCATCH = round(recmatrix[1:rlen, 6])
     )
     
-    glimpse(m2)
+    if(dbg) glimpse(m2)
     # create subset of nonzero catch years                       why????????????????n=rlen,
     # since catch for assessment year is incomplete, remove number;
     newlen = length(m2$FISHERYYEAR)
@@ -214,9 +205,7 @@ SARA_readwrite <- function(dbg=FALSE) {
     # Crab catch
     #   read in crab catch data
     if (crabflag == 1) {
-      crabmatrix = matrix(data = NA,
-                          nrow = rlen,
-                          ncol = 4)
+      crabmatrix = matrix(data = NA, nrow = rlen, ncol = 4)
       crabmatrix[1:rlen, 1] = m2$FISHERYYEAR
       
       crnam = c('FISHERYYEAR',
@@ -233,7 +222,7 @@ SARA_readwrite <- function(dbg=FALSE) {
             skip = skipp + ir,
             nlines = 1,
             n = rlen,
-            quiet = TRUE,
+            quiet = !dbg,
             what = "numeric"
           ))
         #if (is.element(i,c(3,4,6))) dum=dum*mtmult;
@@ -312,7 +301,7 @@ SARA_readwrite <- function(dbg=FALSE) {
     # STOCKNOTES
     ir <-
       match('STOCKNOTES', ifile) # find the matching name in the ifile set
-    s1$STOCKNOTES = (scan( fn, skip = skipp + ir, nlines = 1, quiet = TRUE, what = "character" ))
+    s1$STOCKNOTES = (scan( fn, skip = skipp + ir, nlines = 1, quiet = !dbg, what = "character" ))
     
     
     # MODFISHERY
@@ -324,7 +313,7 @@ SARA_readwrite <- function(dbg=FALSE) {
         for (i in 1:clen) {
           ir <- match(cnam[i], ifile) # find the matching name in the ifile set
           mum <- NA
-          mum <- as.double(scan( fn, skip = skipp + ir + j - 1, nlines = 1, n = rlen, quiet = TRUE, what = "numeric" ))
+          mum <- as.double(scan( fn, skip = skipp + ir + j - 1, nlines = 1, n = rlen, quiet = !dbg, what = "numeric" ))
           dlen = length(mum)
           recray[1:dlen, i, j] = mum
         }
@@ -354,24 +343,16 @@ SARA_readwrite <- function(dbg=FALSE) {
         match('AGE', ifile) # find the matching name in the ifile set
       dum <- NA
       dum <-
-        as.double(scan(
-          fn,
-          skip = skipp + ir,
-          nlines = 1,
-          quiet = TRUE,
-          what = "numeric"
-        ))
+        as.double(scan( fn, skip = skipp + ir, nlines = 1, quiet = !dbg, what = "numeric" ))
       rlen = length(dum)
-      recmatrix = matrix(data = NA,
-                         nrow = rlen,
-                         ncol = clen)
+      recmatrix = matrix(data = NA, nrow = rlen, ncol = clen)
       recmatrix[1:rlen, 1] = dum
       
       for (i in 2:clen) {
         ir <-
           match(cnam[i], ifile) # find the matching name in the ifile set
         dum <- NA
-        dum <- as.double(scan( fn, skip = skipp + ir, nlines = 1, n = rlen, quiet = TRUE, what = "numeric" ))
+        dum <- as.double(scan( fn, skip = skipp + ir, nlines = 1, n = rlen, quiet = !dbg, what = "numeric" ))
         dlen = length(dum)
         recmatrix[1:dlen, i] = dum
       }
@@ -398,7 +379,7 @@ SARA_readwrite <- function(dbg=FALSE) {
               skip = skipp + ir + j - 1,
               nlines = 1,
               n = rlen,
-              quiet = TRUE,
+              quiet = !dbg,
               what = "numeric"
             ))
           dlen = length(dum)
@@ -454,7 +435,7 @@ SARA_readwrite <- function(dbg=FALSE) {
                     skip = skipp + ir + pos,
                     nlines = 1,
                     n = rlen,
-                    quiet = TRUE,
+                    quiet = !dbg,
                     what = "numeric"
                   )
                 )
@@ -487,10 +468,10 @@ SARA_readwrite <- function(dbg=FALSE) {
     # SARASERIES   surveys
     ir         <-
       match('SURVEYDESC', ifile) # find the matching name in the ifile set
-    surveylist <- scan( fn, skip = skipp + ir, nlines = 1, quiet = TRUE, what = "character" )
+    surveylist <- scan( fn, skip = skipp + ir, nlines = 1, quiet = !dbg, what = "character" )
     slen = length(surveylist)
     irr <- match('SURVEYMULT', ifile) # find the matching name in the ifile set
-    surveymult = as.double(scan( fn, skip = skipp + irr, nlines = 1, n = slen, quiet = TRUE, what = "numeric" ))
+    surveymult = as.double(scan( fn, skip = skipp + irr, nlines = 1, n = slen, quiet = !dbg, what = "numeric" ))
     surfile = ifile[-(1:irr)]
     
     i = 1
@@ -501,10 +482,10 @@ SARA_readwrite <- function(dbg=FALSE) {
         ir   <-
           match(surveylist[i], surfile) # find the matching name in the ifile set
         dum  <- NA
-        dum  <- as.double(scan( fn, skip = skipp + irr + ir, nlines = 1, quiet = TRUE, what = "numeric" ))
+        dum  <- as.double(scan( fn, skip = skipp + irr + ir, nlines = 1, quiet = !dbg, what = "numeric" ))
         
         dum2 <- NA
-        dum2 <- as.double(scan( fn, skip = skipp + irr + ir + 1, nlines = 1, quiet = TRUE, what = "numeric" ))
+        dum2 <- as.double(scan( fn, skip = skipp + irr + ir + 1, nlines = 1, quiet = !dbg, what = "numeric" ))
         dum3 <- NA
         v    <- data.frame(
             STOCKJOIN = sjoin,

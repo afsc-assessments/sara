@@ -11,7 +11,6 @@ mod_stats<-mod_stats[mod_stats$STOCKJOIN%in%unique(sara_stock$STOCKJOIN),]
 df<-tibble(left_join(mod_stats,sara_stock));names(df) <- tolower(names(df))
 glimpse(df)
 
-?merge
 m2<-merge(mod_stats,mod_stock,all.x=TRUE)
 m2<-merge(m2,sara_stock,all.x=TRUE)
 m2<-merge(m2,sarastocknames,all.x=TRUE)

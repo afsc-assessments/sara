@@ -4,7 +4,7 @@ BSAI	#	region	(AI	AK	BOG	BSAI	EBS	GOA	SEO	WCWYK)
 1a	#	TIER	(1a	1b	2a	2b	3a	3b	4	5	6)																																
 none	#	TIER2	if	mixed	(none	1a	1b	2a	2b	3a	3b	4	5	6)																													
 full	#	UPDATE	(new	benchmark	full	partial)																																					
-428719	#	Minimum	B	Lower	95%	confidence	interval	for	spawning	biomass	in	assessment	year																														
+128719	#	Minimum	B	Lower	95%	confidence	interval	for	spawning	biomass	in	assessment	year																														
 490503	#	Maximum	B	Upper	95%	confidence	interval	for	spawning	biomass	in	assessment	year																														
 186030	#	BMSY	is	equilibrium	spawning	biomass	at	MSY	(Tiers	1-2)	or	8-Jul	x	B40%	(Tier	3)																											
 statistical age-structured model using ADMB	#	MODEL	-	Required	only	if	NMFS	toolbox	software	used;	optional	otherwise																															
