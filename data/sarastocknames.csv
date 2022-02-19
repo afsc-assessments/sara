@@ -7,17 +7,23 @@ TURBOT,Greenland turbot
 ATF,Arrowtooth flounder
 KAMCHATKA,Kamchatka flounder
 NROCKSOLE,Northern rock sole
+NRSCENTRAL,Northern rock sole
+NRSWEST,Northern rock sole
 SHALLOWFLAT,Shallow water flatfish
 SROCKSOLE,Southern rock sole
+SRSCENTRAL,Southern rock sole
+SRSWEST,Southern rock sole
 UROCKSOLE,Unidentified rock sole
 FLATHEAD,Flathead sole
-PLAICE,Alaska Plaice
+AKPLAICE,Alaska Plaice
 DEEPFLAT,Deep water flatfish
 REX,Rex sole
+REXEAST,Rex sole
+REXWCENTRAL,Rex sole
 OFLAT,Other flatfish
 POP,Pacific ocean perch
 NORK,Northern rockfish
-BLACKSPOTTED,Blackspotted rockfish
+BLACKSPOTTED,Blackspotted and rougheye rockfish
 SHORTRAKER,Shortraker rockfish
 DUSKY,Dusky rockfish
 DSR,Demersal shelf rockfish
@@ -40,4 +46,4 @@ SNOWCRAB,Snow crab
 TANNER,Tanner crab
 GOLDKING,Golden king crab
 DOVER,Dover sole
-ROUGH,Rougheye rockfish
+REBS,Rougheye and blackspotted rockfish

@@ -2,7 +2,7 @@
 #'
 #' @return  update from last year's files
 #' @export
-SARA_readwrite <- function() {
+SARA_readwrite <- function(dbg=FALSE) {
   flist = list.files("data-raw", pattern = "*.dat")
   
   fnam <- flist[12]
@@ -12,7 +12,7 @@ SARA_readwrite <- function() {
   mod_stats  <<- data.frame(read.csv("data/modstats.csv", as.is = T))[,-1]
   sara_names <<- data.frame(read.csv("data/sarastocknames.csv", as.is = T))
   for (fnam in flist) {
-    print(fnam)
+    if(dbg) print(fnam)
     fn <- paste0("data-raw/", fnam)
     skipp = 0			# skipp indicates the header lines to be skipped
     myfile <- scan( fn, what = "character", skip = skipp, flush = T, blank.lines.skip = FALSE, quiet = F )
@@ -515,7 +515,7 @@ SARA_readwrite <- function() {
             AMT_VARIANCE = dum3
           )
         sara_series  <<- rbind(sara_series, v)
-        print(tail(sara_series[, 1:4], 3))
+        if(dbg) print(tail(sara_series[, 1:4], 3))
       }
     }
     sara_stock <<- rbind(sara_stock, s1)
