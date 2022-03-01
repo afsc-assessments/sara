@@ -1,14 +1,16 @@
 #'
 #' SARA report files into dataframes 
+#' 
 #' @export
 #' @return  update from last year's files
 SARA <- function(){
-  sara_series<- data.frame(read.csv("data/saraseries.csv", as.is=T))[,-1]
-  sara_stock <- data.frame(read.csv("data/sarastock.csv",as.is=T))[,-1]
-  mod_stock  <- data.frame(read.csv("data/modstock.csv",as.is=T))[,-1]
-  mod_stats  <- data.frame(read.csv("data/modstats.csv",as.is=T))[,-1]
-  sara_names <- data.frame(read.csv("data/sarastocknames.csv",as.is=T))
-  sarastocknames<-read.csv("data/sarastocknames.csv",header=T)
+  library(here)
+  sara_series<- data.frame(read.csv(here("data/saraseries.csv"), as.is=T))[,-1]
+  sara_stock <- data.frame(read.csv(here("data/sarastock.csv"),as.is=T))[,-1]
+  mod_stock  <- data.frame(read.csv(here("data/modstock.csv"),as.is=T))[,-1]
+  mod_stats  <- data.frame(read.csv(here("data/modstats.csv"),as.is=T))[,-1]
+  sara_names <- data.frame(read.csv(here("data/sarastocknames.csv"),as.is=T))
+  sarastocknames<-read.csv(here("data/sarastocknames.csv"),header=T)
 # Now append new stuff onto it
 SARA_readwrite()
 #SARA_readwrite_form()

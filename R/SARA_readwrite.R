@@ -3,17 +3,18 @@
 #' @return  update from last year's files
 #' @export
 SARA_readwrite <- function(dbg=FALSE) {
-  flist = list.files("data-raw", pattern = "*.dat")
+  library(here)
+  flist = list.files(here("data-raw"), pattern = "*.dat")
   
   fnam <- flist[12]
-  sara_series<<- data.frame(read.csv("data/saraseries.csv", as.is = T))[,-1]
-  sara_stock <<- data.frame(read.csv("data/sarastock.csv", as.is = T))[,-1]
-  mod_stock  <<- data.frame(read.csv("data/modstock.csv", as.is = T))[,-1]
-  mod_stats  <<- data.frame(read.csv("data/modstats.csv", as.is = T))[,-1]
-  sara_names <<- data.frame(read.csv("data/sarastocknames.csv", as.is = T))
+  sara_series<<- data.frame(read.csv(here("data/saraseries.csv"), as.is = T))[,-1]
+  sara_stock <<- data.frame(read.csv(here("data/sarastock.csv"), as.is = T))[,-1]
+  mod_stock  <<- data.frame(read.csv(here("data/modstock.csv"), as.is = T))[,-1]
+  mod_stats  <<- data.frame(read.csv(here("data/modstats.csv"), as.is = T))[,-1]
+  sara_names <<- data.frame(read.csv(here("data/sarastocknames.csv"), as.is = T))
   for (fnam in flist) {
     if(dbg) print(fnam)
-    fn <- paste0("data-raw/", fnam)
+    fn <- paste0(here("data-raw"), fnam)
     skipp = 0			# skipp indicates the header lines to be skipped
     myfile <- scan( fn, what = "character", skip = skipp, flush = T, blank.lines.skip = FALSE, quiet = !dbg )
     
