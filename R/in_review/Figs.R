@@ -12,10 +12,12 @@ SARA()
 df<-tibble(left_join(mod_stats,sara_stock));names(df) <- tolower(names(df))
 
 glimpse(df)
+df |> group_by(stock,region) |> summarise(max(assessyear))
 
 df |> filter(assessyear==2021) |> ggplot(aes(x=spawnbiomass,y=recruitment,label=fisheryyear)) +
-  
-  geom_point(size=.2) + geom_smooth() + theme_minimal() + facet_wrap(stock~region,scale="free")
+  geom_point(size=.2) + geom_smooth() + theme_minimal() + facet_wrap(stock~region,scale="free") +
+  expand_limits(x = 0, y = 0)
+
 sara_stock<-sara_stock[sara_stock$ASSESSYEAR==2021,]
 mod_stats<-mod_stats[mod_stats$STOCKJOIN%in%unique(sara_stock$STOCKJOIN),]
 df<-tibble(left_join(mod_stats,sara_stock));names(df) <- tolower(names(df))
