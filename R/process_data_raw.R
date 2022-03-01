@@ -2,8 +2,8 @@
 #'
 #' Process's the Roxygen header on the csv files in data-raw into R files for each data set into
 #'  data folder and R folder
+#' from Eli Holmes salmon work (for example...)
 #' @keywords internal
-#' @export
 process_data_raw <- function() {
   
   # Clean up prior data files and their R and vignette files

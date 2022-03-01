@@ -3,4 +3,3 @@
 export(SARA)
 export(SARA_readwrite)
 export(SARA_readwrite_form)
-export(process_data_raw)

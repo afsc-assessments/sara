@@ -4,7 +4,7 @@
 \alias{SARA_readwrite}
 \title{SARA report files into dataframes}
 \usage{
-SARA_readwrite()
+SARA_readwrite(dbg = FALSE)
 }
 \value{
 update from last year's files

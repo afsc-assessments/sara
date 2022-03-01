@@ -4,8 +4,18 @@ library(scales)
 # Get SARA data
 ########## I don't remember what this did or how I got the .csvs I read in below
 # Grab up the data in the data-raw directory
-SARA()
 #### make graphs  
+library(SARA)
+
+SARA()
+
+df<-tibble(left_join(mod_stats,sara_stock));names(df) <- tolower(names(df))
+
+glimpse(df)
+
+df |> filter(assessyear==2021) |> ggplot(aes(x=spawnbiomass,y=recruitment,label=fisheryyear)) +
+  
+  geom_point(size=.2) + geom_smooth() + theme_minimal() + facet_wrap(stock~region,scale="free")
 sara_stock<-sara_stock[sara_stock$ASSESSYEAR==2021,]
 mod_stats<-mod_stats[mod_stats$STOCKJOIN%in%unique(sara_stock$STOCKJOIN),]
 df<-tibble(left_join(mod_stats,sara_stock));names(df) <- tolower(names(df))

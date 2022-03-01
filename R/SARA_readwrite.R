@@ -14,7 +14,7 @@ SARA_readwrite <- function(dbg=FALSE) {
   sara_names <<- data.frame(read.csv(here("data/sarastocknames.csv"), as.is = T))
   for (fnam in flist) {
     if(dbg) print(fnam)
-    fn <- paste0(here("data-raw"), fnam)
+    fn <- here("data-raw", fnam)
     skipp = 0			# skipp indicates the header lines to be skipped
     myfile <- scan( fn, what = "character", skip = skipp, flush = T, blank.lines.skip = FALSE, quiet = !dbg )
     
