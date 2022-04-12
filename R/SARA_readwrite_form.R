@@ -1,3 +1,9 @@
+#'
+#' Actual function that reads in existing Tier 5 datafiles in data subdirectory, then 
+#' appends the results from the rawdata subdirectory
+#' 
+#' Draft
+#'
 #' SARA report files into dataframes 
 #'
 #' @return  update from last year's files

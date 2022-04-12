@@ -2,7 +2,8 @@
 % Please edit documentation in R/SARA_readwrite_form.R
 \name{SARA_readwrite_form}
 \alias{SARA_readwrite_form}
-\title{SARA report files into dataframes}
+\title{Actual function that reads in existing Tier 5 datafiles in data subdirectory, then
+appends the results from the rawdata subdirectory}
 \usage{
 SARA_readwrite_form()
 }
@@ -10,5 +11,8 @@ SARA_readwrite_form()
 update from last year's files
 }
 \description{
+Draft
+}
+\details{
 SARA report files into dataframes
 }

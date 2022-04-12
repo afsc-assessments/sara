@@ -2,22 +2,56 @@
 title: "Stock assessment results archive (SARA)"
 author: "Jim Ianelli "
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Vignette Title}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output: 
+  bookdown::html_document2:
+    code_folding: hide
+    fig_caption: yes
+    number_sections: yes
+    theme: readable
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
-```{r setup, include = FALSE}
+```{css zoom-lib-src, echo = FALSE}
+script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+```
+
+```{js zoom-jquery, echo = FALSE}
+ $(document).ready(function() {
+    $('body').prepend('<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>');
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src')).css({width: '100%'});
+      $('.zoomDiv').css({opacity: '1', width: 'auto', border: '1px solid white', borderRadius: '5px', position: 'fixed', top: '50%', left: '50%', marginRight: '-50%', transform: 'translate(-50%, -50%)', boxShadow: '0px 0px 50px #888888', zIndex: '50', overflow: 'auto', maxHeight: '100%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'}); 
+    });
+  });
+```
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir=here::here())
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=FALSE, results=FALSE,fig.width=6, fig.height=5)
+
+
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 library(tidyverse)
 library(scales)
+library(SARA)
 ```
-This shows some rudimentary ways to access the stock assessment results archive.
+# Stock Assessment Results Repository (SARA)
+
+This is intended to show some rudimentary ways to access the stock assessment 
+results archive.
 
 ## Installation Instructions
 This function likely depends on R version >=4.0.
@@ -53,9 +87,19 @@ the data-raw directory and create a number of dataframes.
 
 `  geom_point(size=.2) + geom_smooth() + theme_minimal() + facet_wrap(stock~region,scale="free")`
 
-```{r,echo=FALSE,warning=FALSE}
-library(SARA)
+```{r,echo=FALSE,warning=FALSE,fig.width=11,fig.height=18}
 SARA()
+df<-tibble(left_join(mod_stats,sara_stock));
+names(df) <- tolower(names(df))
+
+df |> filter(assessyear>=2019) |> mutate(Assessed_Year=as.factor(assessyear),
+                                         Year=fisheryyear,SSB=spawnbiomass) |>
+  ggplot(aes(y=SSB,x=Year,label=Year,color=Assessed_Year)) +
+   geom_line(stat='Identity',width=2) + theme_minimal() +
+   facet_wrap(stock~region,scale="free") + expand_limits(y = 0)
+```
+
+```{r,echo=FALSE,warning=FALSE,fig.width=11,fig.height=18}
 df<-tibble(left_join(mod_stats,sara_stock));
 names(df) <- tolower(names(df))
 df |> filter(assessyear==2021) |> ggplot(aes(x=spawnbiomass,y=recruitment,label=fisheryyear)) + 

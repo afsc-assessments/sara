@@ -26,7 +26,7 @@ glimpse(df)
 m2<-merge(mod_stats,mod_stock,all.x=TRUE)
 m2<-merge(m2,sara_stock,all.x=TRUE)
 m2<-merge(m2,sarastocknames,all.x=TRUE)
-#m2
+m2
 ### Set up some stuff for recruitment graphs
 m3<-m2[!is.na(m2$RECRUITMENT),]
 m3<-m3[m3$FISHERYYEAR>1976,]
@@ -42,7 +42,7 @@ g[g$Anomaly>0,]$cola<-"pos"
 g$cola<-factor(g$cola)
 
 stocks<-unique(m3$STOCKJOIN)
-## start plots
+st## start plots
 path<-getwd() 
 plotpath<-paste0(path,"/plots")
 if (file.exists(plotpath)){

@@ -2,7 +2,7 @@
 % Please edit documentation in R/SARA_R.R
 \name{SARA}
 \alias{SARA}
-\title{SARA report files into dataframes}
+\title{Process SARA report files into dataframes and save to a spreadsheet}
 \usage{
 SARA()
 }
@@ -10,5 +10,6 @@ SARA()
 update from last year's files
 }
 \description{
-SARA report files into dataframes
+Depends on having files in the rawdata subdirectory
+Will crash if file format incorrect
 }

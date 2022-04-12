@@ -1,6 +1,11 @@
-#' SARA report files into dataframes
+#'
+#' Actual function that reads in existing Tier 3 datafiles (results) in data subdirectory, then 
+#' appends the results from the rawdata subdirectory
+#' 
+#' Draft
 #'
 #' @return  update from last year's files
+#'
 #' @export
 SARA_readwrite <- function(dbg=FALSE) {
   library(here)

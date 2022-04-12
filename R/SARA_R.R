@@ -1,7 +1,11 @@
 #'
-#' SARA report files into dataframes 
+#' Process SARA report files into dataframes and save to a spreadsheet
+#' 
+#' Depends on having files in the rawdata subdirectory
+#' Will crash if file format incorrect 
 #' 
 #' @export
+#' 
 #' @return  update from last year's files
 SARA <- function(){
   library(here)

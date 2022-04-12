@@ -2,7 +2,8 @@
 % Please edit documentation in R/SARA_readwrite.R
 \name{SARA_readwrite}
 \alias{SARA_readwrite}
-\title{SARA report files into dataframes}
+\title{Actual function that reads in existing Tier 3 datafiles (results) in data subdirectory, then
+appends the results from the rawdata subdirectory}
 \usage{
 SARA_readwrite(dbg = FALSE)
 }
@@ -10,5 +11,5 @@ SARA_readwrite(dbg = FALSE)
 update from last year's files
 }
 \description{
-SARA report files into dataframes
+Draft
 }
